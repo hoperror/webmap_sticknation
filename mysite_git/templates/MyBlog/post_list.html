@@ -1,0 +1,44 @@
+{% extends "MyBlog/base.html" %}
+
+{% block content %}
+<section style="text-align: center; margin-bottom: 40px; padding-top: 20px;">
+    <h2 style="font-size: 2.5rem; color: #2c3e50;">Découvertes Récentes</h2>
+    <p style="color: #666;">Les derniers spécimens homologués par la communauté.</p>
+</section>
+
+<div class="gallery">
+    {% for stick in posts %}
+        <div class="stick-card">
+            <a href="{{ stick.get_absolute_url }}">
+                {% if stick.image %}
+                    <img src="{{ stick.image.url }}" class="stick-img" alt="{{ stick.title }}">
+                {% else %}
+                    <div style="height:250px; background:#eee; display:flex; align-items:center; justify-content:center; font-size: 3rem;">🪵</div>
+                {% endif %}
+            </a>
+            
+            <div class="card-content">
+                <div class="meta">
+                    Par <a href="{% url 'MyBlog:user_profile' stick.author.username %}">@{{ stick.author }}</a> 
+                    | {{ stick.publish|date:"d M Y" }}
+                </div>
+                <h3 style="margin: 10px 0;"><a href="{{ stick.get_absolute_url }}" style="color: inherit;">{{ stick.title }}</a></h3>
+                <div class="stats">
+                    <span>❤️ {{ stick.likes }}</span>
+                    <span>📍 {{ stick.location_name|default:"Lieu inconnu" }}</span>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <span style="background: #f1f2f6; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">🎮 {{ stick.handling_score }}/10</span>
+                    <span style="background: #f1f2f6; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">✨ {{ stick.aesthetics_score }}/10</span>
+                </div>
+                <a href="{{ stick.get_absolute_url }}" class="btn" style="width: 100%; margin-top: 20px; text-align: center;">Expertise complète</a>
+            </div>
+        </div>
+    {% empty %}
+        <div style="grid-column: 1 / -1; text-align: center; padding: 50px;">
+            <p style="font-size: 1.2rem; color: #888;">Aucun bâton n'a encore été répertorié. Soyez le premier !</p>
+            <a href="/admin/MyBlog/stick/add/" class="btn">Publier un spécimen</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
