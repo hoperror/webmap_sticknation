@@ -1,0 +1,198 @@
+/* --- BASE & TYPOGRAPHIE --- */
+body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Gris très clair */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* Bleu nuit */
+    font-weight: 700;
+}
+
+a {
+    color: #27ae60; /* Vert Sticknation */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #219150;
+}
+
+/* --- NAVBAR (MENU) --- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+header h1 a {
+    font-size: 1.5rem;
+    color: #2c3e50 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #27ae60;
+}
+
+/* --- CONTENEUR PRINCIPAL --- */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 80vh;
+}
+
+/* --- GALERIE (CARTE) --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.stick-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none !important; /* On enlève les bordures moches */
+}
+
+.stick-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stick-img {
+    height: 250px; /* Plus grand */
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #34495e;
+}
+
+/* --- DÉTAIL D'UN STICK --- */
+.stick-detail h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.main-image-container {
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.technical-sheet {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #27ae60 !important; /* Vert Sticknation */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+/* --- COMMENTAIRES --- */
+.comment {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #ddd;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #219150;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+}
