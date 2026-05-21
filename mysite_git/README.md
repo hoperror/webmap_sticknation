@@ -2,7 +2,7 @@
 
 **Sticknation** est une plateforme communautaire et scientifique dédiée à l'inventaire, la notation et l'archivage des meilleurs bâtons trouvés dans la nature. 
 
-## 🎯 Le concept et inspiration
+## Concept et inspiration
 Le projet est directement inspiré du phénomène viral **Official Stick Reviews** ([Instagram](https://www.instagram.com/officialstickreviews/) / [Site Web](https://officialstickreviews.com/)). 
 
 L'idée est de reprendre les codes du "sérieux absurde" : traiter un objet simple avec la rigueur d'un expert forestier ou d'un conservateur de musée. Tout le monde a déjà trouvé un bâton "parfait" ; **Sticknation** permet d'officialiser ces découvertes. Chaque spécimen est analysé selon :
@@ -12,37 +12,37 @@ L'idée est de reprendre les codes du "sérieux absurde" : traiter un objet simp
 
 ---
 
-## 🛠 Fonctionnalités réalisées (étapes du projet)
+## Fonctionnalités réalisées (étapes du projet)
 
 Le projet a été transformé d'un blog standard en une application interactive sophistiquée :
 
-### 🌍 Exploration cartographique (Leaflet et AJAX)
+### Exploration cartographique (Leaflet et AJAX)
 - **Dashboard immersif** : une interface de carte plein écran avec barre latérale rétractable.
 - **Multi-fonds de carte** : choix entre vue plan, satellite (Esri) et mode sombre.
 - **Voyage temporel** : un slider dynamique (via API JSON interne) permet de filtrer les découvertes par année en temps réel.
 - **Mode cumulatif** : visualisation de l'historique de la propagation des trouvailles.
 - **Exploration par zones** : chargement dynamique de fichiers **GeoJSON** pour zoomer sur des régions spécifiques.
 
-### 👥 Interaction et social
+### Interaction et social
 - **Système de "likes" (AJAX)** : approbation des spécimens (❤️) avec mise à jour asynchrone du compteur.
 - **Profils experts** : chaque membre possède sa fiche récapitulant l'ensemble de ses "répertoriages".
 - **Commentaires hybrides** : système de commentaires intelligent gérant les comptes utilisateurs (login automatique) et les contributions "invité".
 
-### ⚙️ Architecture technique
+### Architecture technique
 - **Django 6.0** : utilisation du framework pour la gestion des modèles, des vues et de la sécurité.
 - **Base de données relationnelle** : gestion des auteurs, des commentaires, des likes et des fichiers GeoJSON.
 - **Gestion des médias** : upload et stockage des photographies de bâtons.
 
 ---
 
-## 🔑 Accès administrateur
+## Accès administrateur
 Pour tester l'ajout de spécimens, la gestion des zones GeoJSON ou la modération :
 - **Utilisateur** : `lucas`
 - **Mot de passe** : `lucas`
 
 ---
 
-## 🚀 Installation et lancement
+## Installation et lancement
 
 1. **Installer les dépendances** :
    ```bash
